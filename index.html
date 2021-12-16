@@ -60,15 +60,15 @@
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
         if(prediction[0].probability.toFixed(2)>0.80){
-            window.location.href =  "./川崎フロンターレ.html";
+            labelContainer.childNodes[0].innerHTML = "./川崎フロンターレ.html"
         }else if(prediction[1].probability.toFixed(2)>0.80){
-            window.location.href = "./レアルマドリード.html";
+            labelContainer.childNodes[0].innerHTML = "./レアルマドリード.html"
         }else if(prediction[2].probability.toFixed(2)>0.80){
-            window.location.href = "./チェルシー.html";
+            labelContainer.childNodes[0].innerHTML = "./チェルシー.html"
         }else if(prediction[3].probability.toFixed(2)>0.80){
-            window.location.href = "./バイエルン.html";
+            labelContainer.childNodes[0].innerHTML = "./バイエルン.html"
         }else if(prediction[4].probability.toFixed(2)>0.80){
-            window.location.href = "./ユベントス.html";
+            labelContainer.childNodes[0].innerHTML = "./ユベントス.html"
         }
     }
 </script>
